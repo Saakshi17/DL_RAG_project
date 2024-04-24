@@ -5,9 +5,9 @@
 
  The setup.py file has all the functions which initilize the setup of the frontend code in the app.py file.
  The project can be run using
- python setup.py
- python app.py 
- streamlit run app.py
+ -python setup.py
+ -python app.py
+ -streamlit run app.py
  The streamlit app runs on the local device and we can prompt the LLMs and check the outputs in both the models.
 
  The execution of the code requires the OpenAI key for generating embeddings. I have not mentioned it in code here.

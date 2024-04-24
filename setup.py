@@ -16,8 +16,7 @@ from langchain import hub
 import os
 import langchain
 import streamlit as st
-os.environ["OPENAI_API_KEY"]='sk-proj-3elbhRpY0vRpr8e7LEKDT3BlbkFJEotEcjYkidAm0K8uxHp8'
-
+os.environ["OPENAI_API_KEY"]=''
 def setup_wikipedia():
     wiki_api_wrapper = WikipediaAPIWrapper(top_k_results=1, doc_content_chars_max=200)
     wiki_query_runner = WikipediaQueryRun(api_wrapper=wiki_api_wrapper)
