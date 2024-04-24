@@ -35,8 +35,8 @@ def setup_vector_store():
     documents = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200).split_documents(documents)
     vectordb = FAISS.from_documents(documents, OpenAIEmbeddings())
     retriever=vectordb.as_retriever()
-    retriever_tool=create_retriever_tool(retriever,"langsmith_search",
-                      "Search for information about LangSmith. For any questions about LangSmith, you must use this tool!")
+    retriever_tool=create_retriever_tool(retriever,"Context Based Search",
+                      "Search for information ")
     return retriever_tool
 
 
@@ -61,6 +61,6 @@ def invoke_query(prompt):
     
     return result['output']
 def invoke_query_noRAG(prompt):
-    llm = ChatOpenAI(model='gpt-3.4', temperature=0)
+    llm = ChatOpenAI(model='gpt-4', temperature=0)
     result=llm.invoke(prompt)
     return result.content

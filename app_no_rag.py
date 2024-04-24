@@ -1,7 +1,7 @@
 # app.py
 
 import streamlit as st
-from setup import setup_wikipedia, setup_arxiv, setup_vector_store, setup_openai_model, setup_openai_tools, 
+from setup import setup_wikipedia, setup_arxiv, setup_vector_store, setup_openai_model, setup_openai_tools, invoke_query_noRAG
 
 # Set up components
 wiki_query_runner = setup_wikipedia()
